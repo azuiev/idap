@@ -6,6 +6,7 @@
 //
 
 #include "mamapapa.h"
+#include <stdbool.h>
 
 //2. Создать метод, который бы имел, как параметр, целое число.
 //Пользовательские истории:
@@ -20,7 +21,15 @@ static const char * const str2 = "papa";
 
 
 void printMamaPapa(int value){
-    if (!(value % 3)) printf(str1);
-    if (!(value % 5)) printf(str2);
-    
+    bool isPrint = false;
+    if (!(value % 3)) {
+        isPrint = true;
+        printf(str1);
+    }
+    if (!(value % 5)) {
+        isPrint = true;
+        printf(str2);
+    }
+    if (isPrint)
+        printf ("\n");
 }
