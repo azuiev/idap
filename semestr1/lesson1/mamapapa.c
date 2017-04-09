@@ -33,7 +33,7 @@ void printMamaPapa(int value){
     //bool isPrint = printStr(str1,value,3);
     //isPrint = printStr(str2,value,5) || isPrint;
     printStr(str1,value,3);
-    printStr(str1,value,5);
+    printStr(str2,value,5);
     
 //    if (isPrint)
 //        printf ("\n");
