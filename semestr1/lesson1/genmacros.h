@@ -13,5 +13,7 @@
 
 #define genPrintMethod(type, formatter) \
         void print_##type(type value) { \
-            printf(#formatter "\n",value) }
+            printf(#formatter "\n",value); }
+
+void print_int(int value);
 #endif /* genmacros_h */

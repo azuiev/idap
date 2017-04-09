@@ -32,8 +32,11 @@ int main(int argc, const char * argv[]) {
         printMamaPapa(i);
         printf("\n");
     }
-    return 0;
+    
     
     //macros
-	
+    print_int(5);
+
+
+return 0;
 }

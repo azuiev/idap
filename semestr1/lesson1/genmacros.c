@@ -9,5 +9,5 @@
 #include "genmacros.h"
 
 genPrintMethod(int, %i);
-genPrintMethod(flost, %5.2f);
+genPrintMethod(float, %5.2f);
 genPrintMethod(long, %ld);
