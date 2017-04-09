@@ -51,9 +51,9 @@
 		1D08CA0E1E99B73D007AEF61 /* lesson1 */ = {
 			isa = PBXGroup;
 			children = (
+				1D08CA0F1E99B73D007AEF61 /* main.c */,
 				1D08CA161E99B7C2007AEF61 /* mamapapa.c */,
 				1D08CA171E99B7C2007AEF61 /* mamapapa.h */,
-				1D08CA0F1E99B73D007AEF61 /* main.c */,
 			);
 			path = lesson1;
 			sourceTree = "<group>";

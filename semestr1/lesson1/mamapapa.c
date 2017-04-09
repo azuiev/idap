@@ -19,17 +19,18 @@
 static const char * const str1 = "mama";
 static const char * const str2 = "papa";
 
+bool printStr(const char * const string, int value, int divisor){
+    bool isPrint = !(value % divisor);
+    if (isPrint) {
+        printf("%s", string);
+    }
+    return isPrint;
+}
 
 void printMamaPapa(int value){
-    bool isPrint = false;
-    if (!(value % 3)) {
-        isPrint = true;
-        printf(str1);
-    }
-    if (!(value % 5)) {
-        isPrint = true;
-        printf(str2);
-    }
+    bool isPrint = printStr(str1,value,3);
+    isPrint = printStr(str2,value,5) || isPrint;
+    
     if (isPrint)
         printf ("\n");
 }
