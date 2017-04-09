@@ -7,7 +7,7 @@
 
 #include "mamapapa.h"
 #include <stdbool.h>
-
+#include <stdio.h>
 //2. Создать метод, который бы имел, как параметр, целое число.
 //Пользовательские истории:
 //- если на вход приходит число, кратное 3, то в консоль должно быть выведено: "мама";
@@ -16,21 +16,25 @@
 //- если на вход приходит число, не удовлетворяющие критериям выше, то в консоль ничего выводить не надо, либо вывести “”, либо “\n”;
 //Требования:
 //- необходимо в цикле пройти 1000 итераций, вывести номер итерации и передать номер итерации в метод.
-static const char * const str1 = "mama";
-static const char * const str2 = "papa";
 
-bool printStr(const char * const string, int value, int divisor){
+typedef const char * const SString;
+static SString str1 = "mama";
+static SString str2 = "papa";
+
+void printStr(SString string, int value, int divisor){
     bool isPrint = !(value % divisor);
     if (isPrint) {
         printf("%s", string);
     }
-    return isPrint;
+    //return isPrint;
 }
 
 void printMamaPapa(int value){
-    bool isPrint = printStr(str1,value,3);
-    isPrint = printStr(str2,value,5) || isPrint;
+    //bool isPrint = printStr(str1,value,3);
+    //isPrint = printStr(str2,value,5) || isPrint;
+    printStr(str1,value,3);
+    printStr(str1,value,5);
     
-    if (isPrint)
-        printf ("\n");
+//    if (isPrint)
+//        printf ("\n");
 }
