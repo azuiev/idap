@@ -9,6 +9,7 @@
 #include <stdio.h>
 #include "mamapapa.h"
 #include <stdbool.h>
+#include "genmacros.h"
 
 int main(int argc, const char * argv[]) {
     //typesizes
@@ -32,4 +33,7 @@ int main(int argc, const char * argv[]) {
         printf("\n");
     }
     return 0;
+    
+    //macros
+	
 }
