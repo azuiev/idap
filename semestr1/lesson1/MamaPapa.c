@@ -21,7 +21,7 @@ typedef const char * const SString;
 static SString str1 = "mama";
 static SString str2 = "papa";
 
-void printStr(SString string, int value, int divisor){
+void AZPrintStr(SString string, int value, int divisor){
     bool isPrint = !(value % divisor);
     if (isPrint) {
         printf("%s", string);
@@ -29,11 +29,11 @@ void printStr(SString string, int value, int divisor){
     //return isPrint;
 }
 
-void printMamaPapa(int value){
+void AZPrintMamaPapa(int value){
     //bool isPrint = printStr(str1,value,3);
     //isPrint = printStr(str2,value,5) || isPrint;
-    printStr(str1,value,3);
-    printStr(str2,value,5);
+    AZPrintStr(str1,value,3);
+    AZPrintStr(str2,value,5);
     
 //    if (isPrint)
 //        printf ("\n");

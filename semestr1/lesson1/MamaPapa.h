@@ -11,6 +11,6 @@
 
 #include <stdio.h>
 
-void printMamaPapa(int value);
+void AZPrintMamaPapa(int value);
 
 #endif /* mamapapa_h */
