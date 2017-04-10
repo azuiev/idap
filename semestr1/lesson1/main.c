@@ -18,12 +18,18 @@ int main(int argc, const char * argv[]) {
     bool s3 = false;
     short s4 = 5;
     char s5 = '5';
+    long s6 = 123456;
+    float s7 = 5.123;
+    double s8 = 123.123;
+    char s9 = 'W';
+    
     
     printf("%lu\n",sizeof(s1));
     printf("%lu\n",sizeof(s2));
     printf("%lu\n",sizeof(s3));
     printf("%lu\n",sizeof(s4));
     printf("%lu\n",sizeof(s5));
+    printf("%lu\n",sizeof(s6));
     
   
     //mamapapa
@@ -33,10 +39,14 @@ int main(int argc, const char * argv[]) {
         printf("\n");
     }
     
-    
     //macros
-    print_int(5);
-
-
-return 0;
+    
+    
+    AZGenCallPrintMethod(int,s1);
+    AZGenCallPrintMethod(long,s6);
+    AZGenCallPrintMethod(double,s8);
+    AZGenCallPrintMethod(bool,s2);
+    AZGenCallPrintMethod(char,s9);
+    AZGenCallPrintMethod(float,s7);
+    return 0;
 }

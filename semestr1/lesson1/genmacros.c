@@ -7,7 +7,15 @@
 //
 
 #include "genmacros.h"
+#include "stdbool.h"
 
-genPrintMethod(int, %i);
-genPrintMethod(float, %5.2f);
-genPrintMethod(long, %ld);
+AZGenPrintMethod(int, %i);
+AZGenPrintMethod(long, %ld);
+AZGenPrintMethod(double, %5.5lf);
+AZGenPrintMethod(bool, %d);
+AZGenPrintMethod(char, %c);
+AZGenPrintMethod(float, %f);
+
+
+
+	

@@ -11,9 +11,11 @@
 
 #include <stdio.h>
 
-#define genPrintMethod(type, formatter) \
-        void print_##type(type value) { \
-            printf(#formatter "\n",value); }
+#define AZGenPrintMethod(type, formatter) \
+    void AZPrint_##type(type * value) { \
+        printf(#formatter "\n",*value); }
 
-void print_int(int value);
+#define AZGenCallPrintMethod(type, value) \
+    AZPrint_##type(&value)
+
 #endif /* genmacros_h */
