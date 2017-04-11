@@ -15,19 +15,19 @@
 #endif /* DiffStructure_h */
 
 struct AZDiffStructure {
-        char * char1;
-        double double1;
-        short short1;
-        short short2;
-        short short3;
-        long long llong1;
-        int int1;
-        float float1;
-        bool bool1;
-        bool bool2;
-        bool bool3;
-        bool bool4;
-        bool bool5;
+    double double1;
+    short short1;
+    short short2;
+    short short3;
+    long long llong1;
+    int int1;
+    float float1;
+    bool bool1;
+    bool bool2;
+    bool bool3;
+    bool bool4;
+    bool bool5;
     bool bool6;
+    char * char1;
 };
 void AZGetFieldPosition(struct AZDiffStructure structure);

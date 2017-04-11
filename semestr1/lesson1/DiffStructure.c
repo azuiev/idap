@@ -22,7 +22,7 @@ typedef  struct AZDiffStructure AZStruct;
     array[i].name = #filed;              \
     array[i].offset = offsetof(type , filed)
 
-void AZSwapOffset(struct AZFieldsOrder *array, index1,index2){
+void AZSwapOffset(struct AZFieldsOrder *array, int index1, int index2){
     int i = array[index1].offset;
     char * s = array[index1].name;
     array[index1].offset = array[index2].offset;
@@ -43,8 +43,9 @@ void AZSort (struct AZFieldsOrder *array) {
             if (array[maxI].offset<array[j].offset)
                 maxI = j;
         }
+        if (maxI == i) maxI = minI;
         if (minI!=i) AZSwapOffset(array,i,minI);
-        if (maxI!=fieldsCount-i-1) AZSwapOffset(array,i,minI);
+        if (maxI!=fieldsCount-i-1) AZSwapOffset(array,fieldsCount-i-1,maxI);
         
     }
 }
