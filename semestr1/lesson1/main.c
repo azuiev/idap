@@ -10,6 +10,7 @@
 #include "MamaPapa.h"
 #include <stdbool.h>
 #include "GenMacros.h"
+#include "DiffStructure.h"
 
 int main(int argc, const char * argv[]) {
     
@@ -42,13 +43,16 @@ int main(int argc, const char * argv[]) {
     }
     
     //macros
-    
-    
     AZGenCallPrintMethod(int,s1);
     AZGenCallPrintMethod(long,s6);
     AZGenCallPrintMethod(double,s8);
     AZGenCallPrintMethod(bool,s2);
     AZGenCallPrintMethod(char,s5);
     AZGenCallPrintMethod(float,s7);
+    
+    //structure;
+    struct AZDiffStructure myStruct;
+    AZGetFieldPosition(myStruct);
+    
     return 0;
 }
