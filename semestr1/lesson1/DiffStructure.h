@@ -19,15 +19,23 @@ struct AZDiffStructure {
     short short1;
     short short2;
     short short3;
+    union {
+        char char2;
+        struct {
+            bool bool1:1;
+            bool bool2:1;
+            bool bool3:1;
+            bool bool4:1;
+            bool bool5:1;
+            bool bool6:1;
+        } byteBools;
+    } bools;
     long long llong1;
     int int1;
     float float1;
-    bool bool1;
-    bool bool2;
-    bool bool3;
-    bool bool4;
-    bool bool5;
-    bool bool6;
     char * char1;
+
+    
 };
+void AZGetStructureSize();
 void AZGetFieldPosition(struct AZDiffStructure structure);

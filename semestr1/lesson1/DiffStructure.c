@@ -9,7 +9,7 @@
 #include "DiffStructure.h"
 #include <stddef.h>
 
-const int fieldsCount = 14;
+const int fieldsCount = 9;
 
 struct AZFieldsOrder{
     short offset;
@@ -62,18 +62,24 @@ void AZGetFieldPosition(){
     AZGenStruct(order, 5, llong1, AZStruct);
     AZGenStruct(order, 6, int1, AZStruct);
     AZGenStruct(order, 7, float1, AZStruct);
-    AZGenStruct(order, 8, bool1, AZStruct);
-    AZGenStruct(order, 9, bool2, AZStruct);
-    AZGenStruct(order, 10, bool3, AZStruct);
-    AZGenStruct(order, 11, bool4, AZStruct);
-    AZGenStruct(order, 12, bool5, AZStruct);
-    AZGenStruct(order, 13, bool6, AZStruct);
+    AZGenStruct(order, 8, bools, AZStruct);
+    
+//    AZGenStruct(order, 8, bool1, AZStruct);
+//    AZGenStruct(order, 9, bool2, AZStruct);
+//    AZGenStruct(order, 10, bool3, AZStruct);
+//    AZGenStruct(order, 11, bool4, AZStruct);
+//    AZGenStruct(order, 12, bool5, AZStruct);
+//    AZGenStruct(order, 13, bool6, AZStruct);
     
     AZSort(order);
     for(int i=0;i<fieldsCount;i++){
         printf("%2i -> %7s has offset %i\n",i, order[i].name,order[i].offset);
     }	
-   
+}
+
+
+void AZGetStructureSize(){
+    printf("Full size is -> %lu\n",sizeof(struct AZDiffStructure));
 }
 
 

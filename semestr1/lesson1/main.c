@@ -53,6 +53,6 @@ int main(int argc, const char * argv[]) {
     //structure;
     struct AZDiffStructure myStruct;
     AZGetFieldPosition(myStruct);
-    
+    AZGetStructureSize();
     return 0;
 }
