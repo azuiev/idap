@@ -11,6 +11,7 @@
 		1D08CA181E99B7C2007AEF61 /* MamaPapa.c in Sources */ = {isa = PBXBuildFile; fileRef = 1D08CA161E99B7C2007AEF61 /* MamaPapa.c */; };
 		1D715EF21E9D61FE00FA5A84 /* DiffStructure.c in Sources */ = {isa = PBXBuildFile; fileRef = 1D715EF01E9D61FE00FA5A84 /* DiffStructure.c */; };
 		1D7D93D81E9E969000531417 /* ConvertToBites.c in Sources */ = {isa = PBXBuildFile; fileRef = 1D7D93D61E9E969000531417 /* ConvertToBites.c */; };
+		1D7D93DB1E9EA9FC00531417 /* AZArray.c in Sources */ = {isa = PBXBuildFile; fileRef = 1D7D93D91E9EA9FC00531417 /* AZArray.c */; };
 		1DEBA1321E9A59FC00D120DE /* GenMacros.c in Sources */ = {isa = PBXBuildFile; fileRef = 1DEBA1301E9A59FC00D120DE /* GenMacros.c */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,8 @@
 		1D715EF11E9D61FE00FA5A84 /* DiffStructure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiffStructure.h; sourceTree = "<group>"; };
 		1D7D93D61E9E969000531417 /* ConvertToBites.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ConvertToBites.c; sourceTree = "<group>"; };
 		1D7D93D71E9E969000531417 /* ConvertToBites.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConvertToBites.h; sourceTree = "<group>"; };
+		1D7D93D91E9EA9FC00531417 /* AZArray.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = AZArray.c; sourceTree = "<group>"; };
+		1D7D93DA1E9EA9FC00531417 /* AZArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AZArray.h; sourceTree = "<group>"; };
 		1DEBA12C1E99B9DD00D120DE /* lesson1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = lesson1; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DEBA1301E9A59FC00D120DE /* GenMacros.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = GenMacros.c; sourceTree = "<group>"; };
 		1DEBA1311E9A59FC00D120DE /* GenMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenMacros.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.c; };
@@ -72,6 +75,8 @@
 				1D715EF11E9D61FE00FA5A84 /* DiffStructure.h */,
 				1D7D93D61E9E969000531417 /* ConvertToBites.c */,
 				1D7D93D71E9E969000531417 /* ConvertToBites.h */,
+				1D7D93D91E9EA9FC00531417 /* AZArray.c */,
+				1D7D93DA1E9EA9FC00531417 /* AZArray.h */,
 			);
 			path = lesson1;
 			sourceTree = "<group>";
@@ -133,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D7D93DB1E9EA9FC00531417 /* AZArray.c in Sources */,
 				1D7D93D81E9E969000531417 /* ConvertToBites.c in Sources */,
 				1D08CA101E99B73D007AEF61 /* main.c in Sources */,
 				1DEBA1321E9A59FC00D120DE /* GenMacros.c in Sources */,
