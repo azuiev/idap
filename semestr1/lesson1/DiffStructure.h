@@ -20,7 +20,7 @@ struct AZDiffStructure {
     short short2;
     short short3;
     union {
-        char char2;
+        char char1;
         struct {
             bool bool1:1;
             bool bool2:1;

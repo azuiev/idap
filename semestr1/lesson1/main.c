@@ -11,6 +11,7 @@
 #include <stdbool.h>
 #include "GenMacros.h"
 #include "DiffStructure.h"
+#include "ConvertToBites.h"
 
 int main(int argc, const char * argv[]) {
     
@@ -54,5 +55,13 @@ int main(int argc, const char * argv[]) {
     struct AZDiffStructure myStruct;
     AZGetFieldPosition(myStruct);
     AZGetStructureSize();
+    
+    //print bites
+    int temp =14;
+    AZPrintBites((char *)&temp, sizeof(temp));
+    long long2 = 511;
+    AZPrintBites((char *)&long2, sizeof(long2));
+    
+    
     return 0;
 }

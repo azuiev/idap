@@ -79,7 +79,7 @@ void AZGetFieldPosition(){
 
 
 void AZGetStructureSize(){
-    printf("Full size is -> %lu\n",sizeof(struct AZDiffStructure));
+    printf("Full size is -> %lu\n\n",sizeof(struct AZDiffStructure));
 }
 
 
