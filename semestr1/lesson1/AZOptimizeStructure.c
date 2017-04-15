@@ -6,10 +6,11 @@
 //  Copyright © 2017 Aleksey Zuiev. All rights reserved.
 //
 
-#include "DiffStructure.h"
 #include <stddef.h>
 
-const int fieldsCount = 9;
+#include "AZOptimizeStructure.h"
+
+const int AZFieldsCount = 9;
 
 struct AZFieldsOrder{
     short offset;
@@ -32,12 +33,12 @@ void AZSwapOffset(struct AZFieldsOrder *array, int index1, int index2){
 }
 
 void AZSort (struct AZFieldsOrder *array) {
-    if (fieldsCount < 2) return;
+    if (AZFieldsCount < 2) return;
     int minI, maxI;
-    for (int i=0;i<fieldsCount/2;i++){
+    for (int i=0;i<AZFieldsCount/2;i++){
         minI = i;
         maxI = i;
-        for(int j=i+1;j<fieldsCount-i;j++){
+        for(int j=i+1;j<AZFieldsCount-i;j++){
             if (array[minI].offset>array[j].offset)
                 minI = j;
             if (array[maxI].offset<array[j].offset)
@@ -45,14 +46,14 @@ void AZSort (struct AZFieldsOrder *array) {
         }
         if (maxI == i) maxI = minI;
         if (minI!=i) AZSwapOffset(array,i,minI);
-        if (maxI!=fieldsCount-i-1) AZSwapOffset(array,fieldsCount-i-1,maxI);
+        if (maxI!=AZFieldsCount-i-1) AZSwapOffset(array,AZFieldsCount-i-1,maxI);
         
     }
 }
 
 
 void AZGetFieldPosition(){
-    struct AZFieldsOrder order[fieldsCount];
+    struct AZFieldsOrder order[AZFieldsCount];
 
     AZGenStruct(order, 0, char1, AZStruct);
     AZGenStruct(order, 1, short1, AZStruct);
@@ -72,7 +73,7 @@ void AZGetFieldPosition(){
 //    AZGenStruct(order, 13, bool6, AZStruct);
     
     AZSort(order);
-    for(int i=0;i<fieldsCount;i++){
+    for(int i=0;i<AZFieldsCount;i++){
         printf("%2i -> %7s has offset %i\n",i, order[i].name,order[i].offset);
     }	
 }

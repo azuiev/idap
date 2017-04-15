@@ -6,8 +6,9 @@
 //  Copyright © 2017 Aleksey Zuiev. All rights reserved.
 //
 
-#include "genmacros.h"
 #include "stdbool.h"
+
+#include "AZMacros.h"
 
 AZGenPrintMethod(int, %i);
 AZGenPrintMethod(long, %ld);

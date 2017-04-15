@@ -6,8 +6,10 @@
 //  Copyright © 2017 Aleksey Zuiev. All rights reserved.
 //
 
-#include "ConvertToBites.h"
 #include <stdbool.h>
+
+#include "AZConvertToBits.h"
+
 union {
     char char1;
     struct {

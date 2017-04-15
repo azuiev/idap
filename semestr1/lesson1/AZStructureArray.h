@@ -11,8 +11,8 @@
 
 #include <stdio.h>
 
-#endif /* AZArray_h */
-
 typedef struct AZArray AZArray;
-
 AZArray *AZArrayCreate();
+void AZPrintElements(AZArray *array);
+
+#endif /* AZArray_h */

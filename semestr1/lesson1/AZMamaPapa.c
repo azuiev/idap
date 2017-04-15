@@ -5,9 +5,6 @@
 //  Copyright © 2017 Aleksey Zuiev. All rights reserved.
 //
 
-#include "mamapapa.h"
-#include <stdbool.h>
-#include <stdio.h>
 //2. Создать метод, который бы имел, как параметр, целое число.
 //Пользовательские истории:
 //- если на вход приходит число, кратное 3, то в консоль должно быть выведено: "мама";
@@ -17,11 +14,17 @@
 //Требования:
 //- необходимо в цикле пройти 1000 итераций, вывести номер итерации и передать номер итерации в метод.
 
-typedef const char * const SString;
-static SString str1 = "mama";
-static SString str2 = "papa";
 
-void AZPrintStr(SString string, int value, int divisor){
+#include <stdbool.h>
+#include <stdio.h>
+
+#include "AZMamaPapa.h"
+
+typedef const char * const AZString;
+static AZString str1 = "mama";
+static AZString str2 = "papa";
+
+void AZPrintStr(AZString string, int value, int divisor){
     bool isPrint = !(value % divisor);
     if (isPrint) {
         printf("%s", string);
