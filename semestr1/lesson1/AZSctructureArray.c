@@ -11,40 +11,64 @@
 
 #include "AZStructureArray.h"
 
-const short AZDefaultSize = 15;
+const short AZDefaultSize = 100;
 
 struct AZArray {
+    size_t refCount;
     size_t length;
     void *data;
 };
 
-void AZArraySetLength(AZArray *array, size_t length){
+void AZArraySetLength(AZArray *array, size_t length) {
     size_t currentLength = array->length;
     if (currentLength == length) {
         return;
     }
     
     array->data = realloc(array->data, length);
+    if (NULL == array->data) {
+        printf("ALARM!");
+        return;
+    }
+    
     if (length > currentLength) {
-        memset(array->data + currentLength, 1, length-currentLength);
+        memset(array->data + currentLength, 125, length-currentLength);
     }
     
     array->length = length;
 }
 
-AZArray *AZArrayCreate(){
-    AZArray *array =(AZArray *)calloc(1,sizeof(array));
+void AZArrayFree(AZArray *array) {
+    AZArraySetLength(array, 0);
+    free(array);
+}
+
+void AZArrayRelease(AZArray *array) {
+    array->refCount -= 1;
+    if (0 == array->refCount) {
+        AZArrayFree(array);
+    }
+    
+}
+
+void AZArrayRetain(AZArray *array) {
+    array->refCount += 1;
+}
+
+AZArray *AZArrayCreate() {
+    AZArray *array = (AZArray *)calloc(1, sizeof(array));
+    AZArrayRetain(array);
     array->length = 0;
     AZArraySetLength(array, AZDefaultSize);
     return array;
 };
 
 void AZPrintElements(AZArray *array){
-    printf("Length = %ld\n",array->length);
+    printf("Length = %ld -> %ld\n",array->length, array->refCount);
     for(int i = 0; i < array->length; i++) {
         printf("%d ",((char *)array->data)[i]);
     }
-    
+
     printf("\n");
     
 }
