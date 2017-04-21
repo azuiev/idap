@@ -14,30 +14,29 @@
 //Требования:
 //- необходимо в цикле пройти 1000 итераций, вывести номер итерации и передать номер итерации в метод.
 
-
 #include <stdbool.h>
 #include <stdio.h>
 
 #include "AZMamaPapa.h"
 
 typedef const char * const AZString;
-static AZString str1 = "mama";
-static AZString str2 = "papa";
 
-void AZPrintStr(AZString string, int value, int divisor){
-    bool isPrint = !(value % divisor);
-    if (isPrint) {
+static AZString AZStringMama = "mama";
+static AZString AZStringPapa = "papa";
+
+bool AZPrintString(AZString string, int value, int divisor){
+    bool shouldPrint = !(value % divisor);
+    if (shouldPrint) {
         printf("%s", string);
     }
-    //return isPrint;
+    return shouldPrint;
 }
 
 void AZPrintMamaPapa(int value){
-    //bool isPrint = printStr(str1,value,3);
-    //isPrint = printStr(str2,value,5) || isPrint;
-    AZPrintStr(str1,value,3);
-    AZPrintStr(str2,value,5);
+    bool isPrinted = AZPrintString(AZStringMama,value,3);
+    isPrinted = AZPrintString(AZStringPapa,value,5) || isPrinted;
     
-//    if (isPrint)
-//        printf ("\n");
+    if (isPrinted) {
+        printf ("\n");
+    }
 }

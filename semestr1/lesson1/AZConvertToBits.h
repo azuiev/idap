@@ -11,6 +11,8 @@
 
 #include <stdio.h>
 
+void AZPrintBites(char * c, int count);
+
 #endif /* ConvertToBites_h */
 
-void AZPrintBites(char * c, int count);
+

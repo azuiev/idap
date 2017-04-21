@@ -10,39 +10,22 @@
 
 #include "AZConvertToBits.h"
 
-union {
-    char char1;
-    struct {
-        bool bool1:1;
-        bool bool2:1;
-        bool bool3:1;
-        bool bool4:1;
-        bool bool5:1;
-        bool bool6:1;
-        bool bool7:1;
-        bool bool8:1;
-    } bools;
-} convertUnion;
+const short BitsInByte = 8;
 
-bool IsLittleEndian(){
+bool AZIsLittleEndian() {
     short temp = 1;
-    return ((char *)&temp)[0]==1;
+    return ((char *)&temp)[0] == 1;
 };
 
 void AZPrintBites(char * c, int count){
-    for(int i=0;i<count;i++){
-        convertUnion.char1 = IsLittleEndian() ?  c[i] : c[count -1- i];
-        printf("%d%d%d%d%d%d%d%d ",
-               convertUnion.bools.bool1,
-               convertUnion.bools.bool2,
-               convertUnion.bools.bool3,
-               convertUnion.bools.bool4,
-               convertUnion.bools.bool5,
-               convertUnion.bools.bool6,
-               convertUnion.bools.bool7,
-               convertUnion.bools.bool8);
-    }
-    printf("\n\n");
+//    char item = 0;
+//    for(int i = 0; i < count; i++){
+//        item = AZIsLittleEndian() ?  c[i] : c[count - 1 - i];
+//        for(int j = 0; j < BitsInByte; j++){
+//            printf("%i", item >> (BitsInByte - i + 1) & 1);
+//        }
+//    }
+//    printf("\n\n");
     
 }
-
+const short AZDefaultSize = 100;
