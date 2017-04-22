@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1D08CA101E99B73D007AEF61 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 1D08CA0F1E99B73D007AEF61 /* main.c */; };
 		1D08CA181E99B7C2007AEF61 /* AZMamaPapa.c in Sources */ = {isa = PBXBuildFile; fileRef = 1D08CA161E99B7C2007AEF61 /* AZMamaPapa.c */; };
+		1D67A5501EAB48AF005C4B9C /* AZTest.c in Sources */ = {isa = PBXBuildFile; fileRef = 1D67A54E1EAB48AF005C4B9C /* AZTest.c */; };
 		1D715EF21E9D61FE00FA5A84 /* AZOptimizeStructure.c in Sources */ = {isa = PBXBuildFile; fileRef = 1D715EF01E9D61FE00FA5A84 /* AZOptimizeStructure.c */; };
 		1D7D93D81E9E969000531417 /* AZConvertToBits.c in Sources */ = {isa = PBXBuildFile; fileRef = 1D7D93D61E9E969000531417 /* AZConvertToBits.c */; };
 		1D7D93DB1E9EA9FC00531417 /* AZSctructureArray.c in Sources */ = {isa = PBXBuildFile; fileRef = 1D7D93D91E9EA9FC00531417 /* AZSctructureArray.c */; };
@@ -31,6 +32,8 @@
 		1D08CA0F1E99B73D007AEF61 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		1D08CA161E99B7C2007AEF61 /* AZMamaPapa.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = AZMamaPapa.c; sourceTree = "<group>"; };
 		1D08CA171E99B7C2007AEF61 /* AZMamaPapa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AZMamaPapa.h; sourceTree = "<group>"; };
+		1D67A54E1EAB48AF005C4B9C /* AZTest.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = AZTest.c; sourceTree = "<group>"; };
+		1D67A54F1EAB48AF005C4B9C /* AZTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AZTest.h; sourceTree = "<group>"; };
 		1D715EF01E9D61FE00FA5A84 /* AZOptimizeStructure.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = AZOptimizeStructure.c; sourceTree = "<group>"; };
 		1D715EF11E9D61FE00FA5A84 /* AZOptimizeStructure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AZOptimizeStructure.h; sourceTree = "<group>"; };
 		1D7D93D61E9E969000531417 /* AZConvertToBits.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = AZConvertToBits.c; sourceTree = "<group>"; };
@@ -64,6 +67,7 @@
 		1D08CA0E1E99B73D007AEF61 /* lesson1 */ = {
 			isa = PBXGroup;
 			children = (
+				1D67A54D1EAB488E005C4B9C /* test */,
 				1D5E1EB11EA266A200D59DFA /* structurearray */,
 				1D5E1EB01EA2661C00D59DFA /* bytestobits */,
 				1D5E1EAF1EA2657400D59DFA /* optimizestructure */,
@@ -117,6 +121,15 @@
 				1D7D93DA1E9EA9FC00531417 /* AZStructureArray.h */,
 			);
 			name = structurearray;
+			sourceTree = "<group>";
+		};
+		1D67A54D1EAB488E005C4B9C /* test */ = {
+			isa = PBXGroup;
+			children = (
+				1D67A54E1EAB48AF005C4B9C /* AZTest.c */,
+				1D67A54F1EAB48AF005C4B9C /* AZTest.h */,
+			);
+			name = test;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D7D93DB1E9EA9FC00531417 /* AZSctructureArray.c in Sources */,
+				1D67A5501EAB48AF005C4B9C /* AZTest.c in Sources */,
 				1D7D93D81E9E969000531417 /* AZConvertToBits.c in Sources */,
 				1D08CA101E99B73D007AEF61 /* main.c in Sources */,
 				1DEBA1321E9A59FC00D120DE /* AZMacros.c in Sources */,

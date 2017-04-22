@@ -12,7 +12,9 @@
 #include <stdio.h>
 
 typedef struct AZArray AZArray;
+
 AZArray *AZArrayCreate();
+
 void AZPrintElements(AZArray *array);
 
 #endif /* AZArray_h */

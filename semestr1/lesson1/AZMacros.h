@@ -6,8 +6,8 @@
 //  Copyright © 2017 Aleksey Zuiev. All rights reserved.
 //
 
-#ifndef genmacros_h
-#define genmacros_h
+#ifndef AZGenMacros_h
+#define AZGenMacros_h
 
 #include <stdio.h>
 
@@ -18,4 +18,4 @@
 #define AZGenCallPrintMethod(type, value) \
     AZPrint_##type(&value)
 
-#endif /* genmacros_h */
+#endif /* AZGenMacros_h */

@@ -51,7 +51,6 @@ void AZSort (struct AZFieldsOrder *array) {
     }
 }
 
-
 void AZGetFieldPosition(){
     struct AZFieldsOrder order[AZFieldsCount];
 
@@ -65,19 +64,11 @@ void AZGetFieldPosition(){
     AZGenStruct(order, 7, float1, AZStruct);
     AZGenStruct(order, 8, bools, AZStruct);
     
-//    AZGenStruct(order, 8, bool1, AZStruct);
-//    AZGenStruct(order, 9, bool2, AZStruct);
-//    AZGenStruct(order, 10, bool3, AZStruct);
-//    AZGenStruct(order, 11, bool4, AZStruct);
-//    AZGenStruct(order, 12, bool5, AZStruct);
-//    AZGenStruct(order, 13, bool6, AZStruct);
-    
     AZSort(order);
     for(int i=0;i<AZFieldsCount;i++){
         printf("%2i -> %7s has offset %i\n",i, order[i].name,order[i].offset);
     }	
 }
-
 
 void AZGetStructureSize(){
     printf("Full size is -> %lu\n\n",sizeof(struct AZDiffStructure));

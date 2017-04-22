@@ -6,13 +6,11 @@
 //  Copyright © 2017 Aleksey Zuiev. All rights reserved.
 //
 
-#ifndef DiffStructure_h
-#define DiffStructure_h
+#ifndef AZOptimizeSctructure_h
+#define AZOptimizeSctructure_h
 
 #include <stdio.h>
 #include <stdbool.h>
-
-#endif /* DiffStructure_h */
 
 struct AZDiffStructure {
     double double1;
@@ -39,3 +37,5 @@ struct AZDiffStructure {
 };
 void AZGetStructureSize();
 void AZGetFieldPosition(struct AZDiffStructure structure);
+
+#endif /* AZOptimizeSctructure_h */

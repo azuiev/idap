@@ -6,8 +6,8 @@
 //  Copyright © 2017 Aleksey Zuiev. All rights reserved.
 //
 
-#ifndef mamapapa_h
-#define mamapapa_h
+#ifndef AZMamaPapa_h
+#define AZMamaPapa_h
 
 #include <stdio.h>
 

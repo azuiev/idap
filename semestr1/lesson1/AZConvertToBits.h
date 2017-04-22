@@ -6,13 +6,13 @@
 //  Copyright © 2017 Aleksey Zuiev. All rights reserved.
 //
 
-#ifndef ConvertToBites_h
-#define ConvertToBites_h
+#ifndef AZConvertToBits_h
+#define AZConvertToBits_h
 
 #include <stdio.h>
 
-void AZPrintBites(char * c, int count);
+void AZPrintBits(char * c, int count);
 
-#endif /* ConvertToBites_h */
+#endif /* AZConvertToBits_h */
 
 

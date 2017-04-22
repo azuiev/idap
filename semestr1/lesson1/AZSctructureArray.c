@@ -11,7 +11,7 @@
 
 #include "AZStructureArray.h"
 
-const short AZDefaultSize = 100;
+const short AZDefaultStructureSize = 100;
 
 struct AZArray {
     size_t refCount;
@@ -48,7 +48,6 @@ void AZArrayRelease(AZArray *array) {
     if (0 == array->refCount) {
         AZArrayFree(array);
     }
-    
 }
 
 void AZArrayRetain(AZArray *array) {
@@ -59,7 +58,7 @@ AZArray *AZArrayCreate() {
     AZArray *array = (AZArray *)calloc(1, sizeof(array));
     AZArrayRetain(array);
     array->length = 0;
-    AZArraySetLength(array, AZDefaultSize);
+    AZArraySetLength(array, AZDefaultStructureSize);
     return array;
 };
 
