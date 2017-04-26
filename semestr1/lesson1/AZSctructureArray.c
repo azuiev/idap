@@ -55,7 +55,7 @@ void AZArrayRetain(AZArray *array) {
 }
 
 AZArray *AZArrayCreate() {
-    AZArray *array = (AZArray *)calloc(1, sizeof(array));
+    AZArray *array = (AZArray *)calloc(1, sizeof(*array));
     AZArrayRetain(array);
     array->length = 0;
     AZArraySetLength(array, AZDefaultStructureSize);

@@ -53,7 +53,7 @@ void AZRunTest() {
     AZGenCallPrintMethod(int,s1);
     AZGenCallPrintMethod(long,s6);
     AZGenCallPrintMethod(double,s8);
-    AZGenCallPrintMethod(bool,s2);
+    AZGenCallPrintMethod(bool,s3);
     AZGenCallPrintMethod(char,s5);
     AZGenCallPrintMethod(float,s7);
     
